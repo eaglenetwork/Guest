@@ -1,3 +1,12 @@
 <script>
-  location.replace(window.prompt("URL"))
+  o = window.prompt("1 - Search, 2 - Website")
+  if (o == "1") {
+  google = "https://google.com/search?q="
+  query = window.prompt("Google Search")
+  query = query.replace(" ", "+")
+  google = google + query
+  location.replace(google)
+  } else {
+    location.replace(window.prompt("URL"))
+  }
 </script>
